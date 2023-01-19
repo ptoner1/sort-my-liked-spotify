@@ -1,13 +1,15 @@
 {
   "name": "spotify-app",
   "version": "1.0.0",
-  "description": "Building spotify playlists from user-selected moments of their past",
+  "description": "Sort a user's Spotify 'liked songs' into niche playlists",
   "main": "index.js",
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "server": "nodemon index.js",
     "client": "cd client && npm run start",
-    "postinstall": "cd client && npm install"
+    "postinstall": "cd client && npm install",
+    "build": "NODE_ENV=production cd client/ && npm install && npm run build",
+    "start-server": "node index.js"
   },
   "keywords": [],
   "author": "Paul Toner",

@@ -35,20 +35,49 @@ const StyledLoginContainer = styled.main`
             translate: 0;
         }
     }
-`
 
-const StyledLoginButton = styled.a`
-background-color: var(--green);
-padding: var(--spacing-md) var(--spacing-xxl);
-border-radius: var(--border-radius-pill);
-display: inline-block;
-font-size: var(--fz-lg);
+    a {
+        background: var(--green);
+        background: linear-gradient(90deg, var(--white) 0%, var(--green) 0%);
+        padding: var(--spacing-md) var(--spacing-xxl);
+        border-radius: var(--border-radius-pill);
+        display: inline-block;
+        font-size: var(--fz-lg);
+        position: relative;
+        /* animation: slideBackground 4s linear 1s infinite; */
+        overflow: hidden;
+        z-index: 2;
 
-&:hover,
-&:focus {
-    text-decoration: none;
-    filter: brightness(1.1);
-}
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            filter: brightness(1.1);
+        }
+
+        .animation {
+            background: linear-gradient(90deg, var(--green) 5%, var(--white) 45%, var(--white) 55%, var(--green) 95%);
+            min-width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0%;
+            top: 50%;
+            translate: -100% -50%;
+            text-decoration: none;
+            animation: slideBackground 3s linear 2s infinite;
+            z-index: -1;
+            opacity: .5;
+        }
+
+        @keyframes slideBackground {
+            from {
+        left: -100%;
+            }
+
+            to {
+        left: 400%;
+            }
+        }
+    }
 `
 
 export default function Login() {
@@ -58,9 +87,10 @@ export default function Login() {
             <img src={Spotify_Logo_Green} alt="Spotify Logo" />
             <h3>welcome to</h3>
             <h1>Sort My Liked</h1>
-            <StyledLoginButton href='http://localhost:8000/login'>
-                Log in
-            </StyledLoginButton>
+            <a href='http://localhost:8000/login'>
+                <div className='animation'></div>
+                <span>Log in</span>
+            </a>
         </StyledLoginContainer>
     )
 }
