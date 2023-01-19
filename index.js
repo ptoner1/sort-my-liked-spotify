@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const querystring = require('querystring');
-console.log('at index.js')
+const path = require('path');
 
 
 const CLIENT_ID = process.env.CLIENT_ID;
@@ -12,7 +12,8 @@ const REDIRECT_URI = process.env.REDIRECT_URI;
 const FRONTEND_URI = process.env.FRONTEND_URI;
 const PORT = process.env.PORT || 8000;
 
-
+// Priority serve static files from client dir
+app.use(express.static(path.resolve(__dirname, './client/build')))
 
 // Generates a random string containing letters and numbers
 const generateRandomString = length => {
@@ -26,6 +27,7 @@ const generateRandomString = length => {
 }
 
 const stateKey = 'spotify_auth_state';
+
 
 
 app.get('/login', (req, res) => {
@@ -111,7 +113,7 @@ app.get('/refresh_token', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.redirect('/');
+    res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
 })
 
 app.listen(PORT, () => {

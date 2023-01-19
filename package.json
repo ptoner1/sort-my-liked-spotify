@@ -1,8 +1,15 @@
 {
-  "name": "spotify-app",
+  "name": "spotify-sort-my-liked",
   "version": "1.0.0",
   "description": "Sort a user's Spotify 'liked songs' into niche playlists",
   "main": "index.js",
+  "engines": {
+    "node": "16.13.1"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "server": "nodemon index.js",
