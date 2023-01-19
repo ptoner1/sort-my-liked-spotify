@@ -60,7 +60,7 @@ function App() {
       <GlobalStyles />
 
       {loading ? (
-        <img className="spinner" src={Spotify_Icon_Green} />
+        <img className="spinner" src={Spotify_Icon_Green} alt="Spotify Logo" />
       ) : (
         checkLoggedIn()
       )}

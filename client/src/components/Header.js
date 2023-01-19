@@ -36,8 +36,8 @@ export default function Header({ profile, newTracksBtn, tracks }) {
                     <div className="menu__hamburger" />
                 </label>
 
-                <img className="header__spotify-icon" src={Spotify_Icon_Green} />
-                <img className="header__spotify-logo" src={Spotify_Logo_White} />
+                <img className="header__spotify-icon" src={Spotify_Icon_Green} alt="Spotify Logo" />
+                <img className="header__spotify-logo" src={Spotify_Logo_White} alt="Spotify Logo" />
 
                 <nav className="menu__nav">
                     <ul className="menu__list">

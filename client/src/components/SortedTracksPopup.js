@@ -49,7 +49,16 @@ export default function SortedTracksPopup({ setLoading, user_id, setDisplayPopup
                     <form className="popup__banner__form" method="post" onSubmit={handleSubmit}>
                         <div className="popup__banner__form__group">
                             <label htmlFor="name">Playlist Name</label>
-                            <input type="text" name="name" id="name" onFocus={focusInput} placeholder="required" value={playlistName} required onChange={e => setPlaylistName(e.target.value)} />
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                onFocus={focusInput}
+                                placeholder="required"
+                                value={playlistName}
+                                required
+                                onChange={e => setPlaylistName(e.target.value)}
+                            />
                         </div>
 
                         <button
@@ -59,7 +68,7 @@ export default function SortedTracksPopup({ setLoading, user_id, setDisplayPopup
                             disabled={sortedTracks.length > 100}
                         >
                             Save to Library &nbsp;
-                            <img src={Spotify_Icon_White} />
+                            <img src={Spotify_Icon_White} alt="Spotify Logo" />
                         </button>
                     </form>
                     <div className="popup__banner__info">

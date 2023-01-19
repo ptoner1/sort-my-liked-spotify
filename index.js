@@ -110,6 +110,10 @@ app.get('/refresh_token', (req, res) => {
         })
 })
 
+app.get('*', (req, res) => {
+    res.redirect('/');
+})
+
 app.listen(PORT, () => {
     console.log(`Express app listening on localhost:/${PORT}`)
 })

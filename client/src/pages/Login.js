@@ -80,6 +80,11 @@ const StyledLoginContainer = styled.main`
     }
 `
 
+const LOGIN_URI =
+    process.env.NODE_ENV !== 'production'
+        ? 'http://localhost:8000/login'
+        : 'https://www.sort-spotify.com/login';
+
 export default function Login() {
 
     return (
@@ -87,7 +92,7 @@ export default function Login() {
             <img src={Spotify_Logo_Green} alt="Spotify Logo" />
             <h3>welcome to</h3>
             <h1>Sort My Liked</h1>
-            <a href='http://localhost:8000/login'>
+            <a href={LOGIN_URI}>
                 <div className='animation'></div>
                 <span>Log in</span>
             </a>
