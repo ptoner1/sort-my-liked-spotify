@@ -35,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
 
   @media (min-width: 1450px) {
@@ -52,10 +53,10 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   min-height: 100%;
-  /* overflow-x: hidden; */
-  overflow-x: visible;
+  box-sizing: border-box;
+  overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background-color: var(--black);

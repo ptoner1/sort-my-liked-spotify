@@ -124,6 +124,11 @@ const StyledHeader = styled.header`
       height: 8rem;
       z-index: 20;
       border-radius: 50px;
+      background-color: var(--grey-medium);
+
+      &:hover {
+        background-color: var(--grey-dark);
+      }
 
       @media (min-width: 700px) {
         bottom: 1rem;
@@ -134,6 +139,11 @@ const StyledHeader = styled.header`
         font-size: var(--fz-lg);
         translate: 0;
         padding: 1.5rem 2.5rem;
+        background-color: var(--black-light);
+
+        &:hover {
+          background-color: var(--grey-medium);
+        }
       }
 
       @media (min-width: 1450px) {
