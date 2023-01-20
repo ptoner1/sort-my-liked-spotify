@@ -29,8 +29,8 @@ const StyledSortedTracksPopup = styled.div`
                 
                 @media (min-width: 710px) {
                     grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: min-content;
                     align-items: start;
-                    min-height: 20vh;
                     font-size: inherit;
                     width: 80%;
                 }
@@ -78,8 +78,10 @@ const StyledSortedTracksPopup = styled.div`
                             left: 50%;
                             top: 50%;
                             translate: -50% -50%;
+                            width: 100%;
                             min-width: 25rem; 
                             color: var(--white);
+                            overflow: visible;
                         }
                     }
                 }
@@ -115,15 +117,24 @@ const StyledSortedTracksPopup = styled.div`
                     border: none;
                     border-radius: 5px;
                     font-size: 1.6rem;
-                    height: 2rem;
-                    padding: .75rem 1.5rem;
+                    height: 4rem;
+                    padding: 1.5rem 1.5rem;
                     background-color: rgba(230,230,230,1);
                     text-align: start;
+                    transition: scale .2s;
+
+                    @media (min-width: 710px) {
+                        height: 2rem;
+                    }
                 }
 
                 input {
-                    background-color: var(--grey-medium);
-                        text-align: center;
+                    background-color: rgba(200,200,200,1);
+                    text-align: center;
+                }
+
+                input:focus {
+                    scale: 1.05;
                 }
             }
 

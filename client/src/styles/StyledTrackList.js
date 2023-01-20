@@ -56,10 +56,10 @@ const StyledTrackList = styled.ul`
     }
 
     &__selected {
-      height: 7rem;
+      height: 8rem;
 
       @media (max-width: 500px) {
-        height: 3.5rem;
+        height: 7rem;
       }
     }
   }
