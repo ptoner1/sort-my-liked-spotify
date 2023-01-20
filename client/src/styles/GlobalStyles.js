@@ -54,7 +54,8 @@ body {
   width: 100%;
   max-width: 100vw;
   min-height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  overflow-x: visible;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background-color: var(--black);
