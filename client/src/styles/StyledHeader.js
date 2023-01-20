@@ -116,13 +116,14 @@ const StyledHeader = styled.header`
   .button {
     &__add {
       position: absolute;
-      bottom: -9rem;
+      bottom: -10rem;
       left: 50%;
       translate: -50%;
       font-size: var(--fz-xl);
       width: 55vw;
-      height: 5rem;
+      height: 8rem;
       z-index: 20;
+      border-radius: 50px;
 
       @media (min-width: 700px) {
         bottom: 1rem;

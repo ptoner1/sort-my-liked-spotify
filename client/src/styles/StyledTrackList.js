@@ -8,10 +8,6 @@ const StyledTrackList = styled.ul`
   letter-spacing: .03rem;
   max-width: var(--site-max-width);
   
-  @media (max-width: 500px) {
-    font-size: 80%;
-  }
-  
   .track__item {
     display: grid;
     align-items: center;
@@ -22,6 +18,7 @@ const StyledTrackList = styled.ul`
     border-radius: var(--border-radius-subtle);
     transition: background-color 0.3s ease;
     cursor: default;
+    max-width: 100vw;
 
     @media (min-width: 500px) {
         grid-template-columns: 2rem minmax(min-content, 20rem) repeat(3, minmax(min-content, 1fr));
@@ -152,6 +149,10 @@ const StyledTrackList = styled.ul`
       cursor: pointer;
       background: transparent;
       padding: 0;
+
+      div {
+        translate: 0 -50%;
+      }
 
       div,
       div::before,
