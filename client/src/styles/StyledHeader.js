@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 const StyledHeader = styled.header`
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   position: relative;
   background: linear-gradient(transparent, rgba(0,0,0,0.5));
   background-color: var(--grey-medium);
@@ -40,34 +41,9 @@ const StyledHeader = styled.header`
     max-width: var(--site-max-width);
     margin: 0 auto;
     padding: var(--spacing-lg) var(--spacing-md);
-    position: relative;
 
     @media (min-width: 768px) {
       padding: var(--spacing-xl) var(--spacing-xxl);
-    }
-
-    .button {
-
-      &__add {
-        position: absolute;
-        bottom: -9rem;
-        left: 50%;
-        translate: -50%;
-        font-size: var(--fz-xl);
-        width: 55vw;
-        height: 5rem;
-        z-index: 20;
-
-        @media (min-width: 700px) {
-          bottom: auto;
-          left: clamp(34rem, 40vw, 48rem);
-          height: auto;
-          width: auto;
-          min-width: 14rem;
-          font-size: var(--fz-lg);
-          translate: 0% .8rem;
-        }
-      }
     }
 
     button:disabled {
@@ -135,6 +111,37 @@ const StyledHeader = styled.header`
   }
 
 
+  
+
+  .button {
+    &__add {
+      position: absolute;
+      bottom: -9rem;
+      left: 50%;
+      translate: -50%;
+      font-size: var(--fz-xl);
+      width: 55vw;
+      height: 5rem;
+      z-index: 20;
+
+      @media (min-width: 700px) {
+        bottom: 1rem;
+        left: clamp(30rem, 45vw, 47rem);
+        height: auto;
+        width: auto;
+        min-width: 14rem;
+        font-size: var(--fz-lg);
+        translate: 0;
+        padding: 1.5rem 2.5rem;
+      }
+
+      @media (min-width: 1450px) {
+        left: 42rem;
+      }
+    }
+}
+
+
 
 
 
@@ -152,7 +159,7 @@ const StyledHeader = styled.header`
     @media (min-width: 700px) {
       width: 15rem;
       left: auto;
-      right: 1.5rem;
+      right: .5rem;
       translate: -50%;
     }
   }
@@ -185,7 +192,7 @@ const StyledHeader = styled.header`
       &__button {
       position: absolute;
       top: 1.5rem;
-      right: 2.5rem;
+      right: 1.5rem;
       background: radial-gradient(rgba(0,0,0,.4), var(--grey-medium));
       width: 5rem;
       height: 5rem;
@@ -221,27 +228,7 @@ const StyledHeader = styled.header`
         }
       }
 
-      /* &__nav {
-        width: 0;
-        opacity: 0;
-        position: absolute;
-        top: .5rem;
-        right: 7.5rem;
-        height: 15vh;
-        max-height: 32rem;
-        min-height: 20rem;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        transition: all .3s;
-        background-color: grey;
-
-        @media (min-width: 700px) {
-          height: 22vw;
-        }
-      } */
-
-            &__nav {
+        &__nav {
         width: 0;
         opacity: 0;
         position: absolute;

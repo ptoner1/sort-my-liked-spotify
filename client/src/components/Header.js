@@ -26,8 +26,9 @@ export default function Header({ profile, newTracksBtn, tracks }) {
                         </span>
                     </p>
                 </div>
-                {newTracksBtn()}
             </div>
+
+            {newTracksBtn()}
 
             <menu className="header__menu">
 

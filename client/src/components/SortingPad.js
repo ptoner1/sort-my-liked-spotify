@@ -185,9 +185,7 @@ const SortingPad = ({ user_id, tracks, setLoading }) => {
                     </div>
 
                     <div className="filter__buttons">
-                        <div className="filter__buttons__small">
-                            <button className="button__reset" onClick={reset}>Reset</button>
-                        </div>
+                        <button className="button__reset" onClick={reset}>Reset</button>
                         <button className="button__sort" onClick={showPopup}>View {sortedTracks.length ? sortedTracks.length : ''} Results</button>
                     </div>
 

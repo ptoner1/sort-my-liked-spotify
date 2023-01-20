@@ -15,10 +15,10 @@ const StyledTrackList = styled.ul`
   .track__item {
     display: grid;
     align-items: center;
-    grid-template-columns: minmax(min-content, 30rem) 4rem;
+    grid-template-columns: 1fr 4rem;
     padding: var(--spacing-xs);
     color: var(--grey-light);
-    font-size: var(--fz-xxs);
+    font-size: var(--fz-sm);
     border-radius: var(--border-radius-subtle);
     transition: background-color 0.3s ease;
     cursor: default;
@@ -130,7 +130,7 @@ const StyledTrackList = styled.ul`
 
   .track__item__name {
     color: var(--white);
-    font-size: var(--fz-xs);
+    font-size: var(--fz-md);
   }
 
   .track__item__name-artist {
@@ -201,6 +201,7 @@ const StyledTrackList = styled.ul`
     translate: 0 5px;
     display: flex;
     justify-content: center;
+    font-size: var(--fz-sm);
 
     &:hover {
       color: var(--white);

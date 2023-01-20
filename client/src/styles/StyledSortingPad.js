@@ -58,15 +58,16 @@ const StyledSortingPad = styled.div`
 
         .wrapper{
             position: relative;
-            width: 80%;
+            width: 100%;
             background-color: var(--grey-dark);
-            padding: 2rem 4rem 4rem 4rem;
-            border-radius: 1rem;
             display: grid;
+            padding: 2rem 4rem 4rem 4rem;
             grid-template-columns: 1fr;
             gap: 5rem;
-
+            
             @media (min-width: 600px) {
+                width: 80%;
+                border-radius: 1rem;
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -242,9 +243,10 @@ const StyledSortingPad = styled.div`
             }
 
             .filter__buttons {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 gap: 2rem;
 
                 &__small {
@@ -257,15 +259,19 @@ const StyledSortingPad = styled.div`
             .button {
                 &__sort {
                     font-size: 2rem;
-                    height: 4rem;
-                    width: 100%;
+                    min-height: 4rem;
+                    padding: 1.5rem 3rem;
+
+                    @media (min-width: 1450px) {
+                        font-size: 1.6rem;
+                    }
                     
                     &:hover {
                         background-color: var(--green)
                     }
                 }
                 &__reset {
-                    width: 33%;   
+                    padding: 1rem 2rem;
                 }
             }
             }

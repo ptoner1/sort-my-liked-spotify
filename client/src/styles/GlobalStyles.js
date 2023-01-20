@@ -45,14 +45,14 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   min-height: 100%;
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
