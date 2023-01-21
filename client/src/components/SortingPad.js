@@ -139,8 +139,24 @@ const SortingPad = ({ user_id, tracks, setLoading }) => {
                     <div style={genSliderValue(a / styleFactor)}>{a}</div>
                     <div style={genSliderValue(b / styleFactor)}>{b}</div>
                     <div className="slider-track" style={genTrackBackground(a / styleFactor, b / styleFactor)}></div>
-                    <input type="range" min="0" max={max || "100"} value={a} onChange={onInputChangeA} onMouseUp={sortPlaylist} />
-                    <input type="range" min="0" max={max || "100"} value={b} onChange={onInputChangeB} onMouseUp={sortPlaylist} />
+                    <input
+                        type="range"
+                        min="0"
+                        max={max || "100"}
+                        value={a}
+                        onChange={onInputChangeA}
+                        onMouseUp={sortPlaylist}
+                        onTouchEnd={sortPlaylist}
+                    />
+                    <input
+                        type="range"
+                        min="0"
+                        max={max || "100"}
+                        value={b}
+                        onChange={onInputChangeB}
+                        onMouseUp={sortPlaylist}
+                        onTouchEnd={sortPlaylist}
+                    />
                 </div>
             </div>
         )

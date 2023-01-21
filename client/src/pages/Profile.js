@@ -31,7 +31,8 @@ export default function Profile({ profile, setAlert, setLoading }) {
 
 
     useEffect(() => {
-        if (!perfectSongHistory) return getOldTracks()
+        if (!songs) return setAlert([300, "Welcome! Press the 'add songs' button to gather your liked songs from Spotify, 50 at a time"])
+        // if (songs.length <= 50) return setAlert([393, "Please reach out if this website isn't working in any way.  I want to help. -Paul"])
     }, [])
 
 
@@ -40,6 +41,7 @@ export default function Profile({ profile, setAlert, setLoading }) {
         // We disable the addTracks button during operation to ensure smooth data flow,
         // one request at a time.
         if (e) e.target.disabled = true;
+        if (!songs) setAlert([393, "Please reach out if this website isn't working in any way.  I want to help. -Paul"]);
 
         const reqLimit = 50;
         const offset = requests * reqLimit;

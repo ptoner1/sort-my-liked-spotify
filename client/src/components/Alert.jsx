@@ -6,8 +6,10 @@ export default function Alert({ code, msg, setAlert }) {
     let type = 'success';
     if (code === undefined) type = '';
     if (code === 201) type = 'warning';
+    if (code >= 300) type = 'warning';
     if (code >= 400) type = 'error';
-    if (code < 400) setTimeout(() => setAlert([]), 1200)
+    if (code === 393) setTimeout(() => setAlert([]), 3000)
+    if (code < 300) setTimeout(() => setAlert([]), 1200)
 
     // A custom message for the most likely error to be found.
     const text = code === 401 ? "You're logged out. -- try refreshing the page or log back in manually" : msg;

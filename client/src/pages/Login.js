@@ -44,7 +44,6 @@ const StyledLoginContainer = styled.main`
         display: inline-block;
         font-size: var(--fz-lg);
         position: relative;
-        /* animation: slideBackground 4s linear 1s infinite; */
         overflow: hidden;
         z-index: 2;
 

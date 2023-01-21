@@ -115,6 +115,11 @@ const StyledHeader = styled.header`
 
   .button {
     &__add {
+
+      &[disabled] {
+        display: none;
+      }
+
       position: absolute;
       bottom: -10rem;
       left: 50%;
@@ -244,17 +249,18 @@ const StyledHeader = styled.header`
         opacity: 0;
         position: absolute;
         top: 1.5rem;
-        right: 7.5rem;
+        right: calc(1.5rem + 2.5rem);
         height: 5rem;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         transition: all .3s;
+        overflow: hidden;
       }
 
       &__list {
         list-style: none;
-        margin-right: 1rem;
+        margin-right: 3.5rem;
         display: flex;
         gap: 1.5rem;
         width: calc(100% - 2rem - 1rem);
