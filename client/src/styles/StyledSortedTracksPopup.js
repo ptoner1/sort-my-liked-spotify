@@ -73,17 +73,18 @@ const StyledSortedTracksPopup = styled.div`
                     }
                         
                         &::after {
-                            content: attr(tooltip);
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            translate: -50% -50%;
-                            width: 100%;
-                            min-width: 25rem; 
-                            color: var(--white);
-                            overflow: visible;
-                        }
+                                content: attr(tooltip);
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                translate: -50% -50%;
+                                width: 100%;
+                                min-width: 30rem; 
+                                color: var(--white);
+                                overflow: visible;
+                            }
                     }
+                    
                 }
             }
             
