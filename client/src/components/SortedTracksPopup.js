@@ -64,7 +64,7 @@ export default function SortedTracksPopup({ setLoading, user_id, setDisplayPopup
                         <button
                             type="submit"
                             className="popup__banner__button"
-                            tooltip="100 song maximum, sorry!"
+                            tooltip="100 song max, sorry!"
                             disabled={sortedTracks.length > 100}
                         >
                             Save to Library &nbsp;
