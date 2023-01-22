@@ -8,6 +8,7 @@ const TrackList = ({ tracks, setTracks, className }) => {
 
     // Popup menu for mobile, maybe.
     function clickTrackMenu(track) {
+        console.log(track)
         alert('This feature not available yet.');
     }
 
@@ -50,7 +51,7 @@ const TrackList = ({ tracks, setTracks, className }) => {
             {tracks && tracks.length ? (
                 <StyledTrackList className={className}>
 
-                    <header className='track__item track__header' style={selectedTrack ? { position: 'static' } : {}}>
+                    <header className='track__item track__header'>
                         <h4 className='track__header__item'>#</h4>
                         <h4 className='track__header__item'>TITLE</h4>
                         <h4 onClick={() => sort('addedAt')} className='track__header__item track__item__added__date'>DATE ADDED</h4>
@@ -86,7 +87,7 @@ const TrackList = ({ tracks, setTracks, className }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <menu className='track__item__menu' onClick={() => clickTrackMenu(track)}><div /></menu>
+                                <menu className='track__item__menu' onClick={() => selectTrack(i)}><div /></menu>
                                 <div className='track__item__num track__item__added__date'>{formatDateAdded(track.addedAt)}</div>
                                 <div className={selectedTrack === i ? `track__item__num__show-attribute` : 'track__item__num'} attr="danceability">{formatPercentage(track.danceability)}</div>
                                 <div className={selectedTrack === i ? `track__item__num__show-attribute` : 'track__item__num'} attr="energy">{formatPercentage(track.energy)}</div>

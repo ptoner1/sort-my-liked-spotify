@@ -55,14 +55,32 @@ const StyledTrackList = styled.ul`
       background-color: var(--grey-dark);
     }
 
+    /* &__selected:not(:first-child):not(div.track__item__title-group) { */
     &__selected {
-      height: 8rem;
-
       @media (max-width: 500px) {
-        height: 7rem;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        
+        
+        .track__item__title-group {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+        
+      }
+
+      @media (min-width: 500px) {
+        .track__item__num__show-attribute::before {
+          content: '';
+          height: 0;
+        }
       }
     }
   }
+
+
+
 
 
   .track__item__num {
@@ -81,17 +99,15 @@ const StyledTrackList = styled.ul`
     &__show-attribute {
     display: flex;
     align-items: center;
-    height: 100%;
     justify-content: center;
+    padding: 2rem;
+    height: 100%;
     font-size: var(--fz-xs);
     font-variant-numeric: tabular-nums;
     overflow: visible;
     position: relative;
-
-    @media (max-width: 500px) {
-      display: none;
-    }
   }
+
   &__show-attribute::before {
     content: attr(attr);
     position: absolute;
@@ -106,7 +122,7 @@ const StyledTrackList = styled.ul`
     font-weight: 300;
     border-bottom: 1px solid var(--grey-medium);
     }
-    
+        
     @media (max-width: 500px) {
         display: none;
       }
@@ -181,14 +197,17 @@ const StyledTrackList = styled.ul`
 
 
   .track__header {
-    border-bottom: 1px solid var(--grey-medium);
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    display: none;
+    position: static;
 
-    @media (max-width: 500px) {
-        display: none;
-        position: static;
+    @media (min-width: 500px) {
+      display: grid;
+      border-bottom: 1px solid var(--grey-medium);
+      position: -webkit-sticky;
+      position: sticky;
+      backdrop-filter: blur(10px);
+      z-index: 20;
+      top: 0;
     }
   }
   .track__header:hover {
@@ -196,25 +215,30 @@ const StyledTrackList = styled.ul`
   }
 
   .track__header__item {
-    cursor: pointer;
-    font-weight: 400;
-    letter-spacing: .075rem;
-    translate: 0 5px;
-    display: flex;
-    justify-content: center;
-    font-size: var(--fz-sm);
+    display: none;
 
-    &:hover {
-      color: var(--white);
-    }
+    @media (min-width: 500px) {
+      cursor: pointer;
+      font-weight: 400;
+      letter-spacing: .075rem;
+      translate: 0 5px;
+      display: flex;
+      justify-content: center;
+      font-size: 1.2rem;
 
-      @media (max-width: 500px) {
-          display: none;
+      &:hover {
+        color: var(--white);
       }
+    }
   }
 
+
+
+
   .track__item__added__date {
-    display: none;
+    @media (min-width: 500px) {
+      display: none;
+    }
 
     @media (min-width: 750px) {
       display: flex;
@@ -223,7 +247,9 @@ const StyledTrackList = styled.ul`
   }
 
   .track__item__valence {
-    display: none;
+    @media (min-width: 500px) {
+      display: none;
+    }
 
     @media (min-width: 850px) {
       display: flex;
@@ -232,7 +258,9 @@ const StyledTrackList = styled.ul`
   }
 
   .track__item__speechiness {
-    display: none;
+    @media (min-width: 500px) {
+      display: none;
+    }
 
     @media (min-width: 950px) {
       display: flex;
@@ -241,7 +269,9 @@ const StyledTrackList = styled.ul`
   }
 
   .track__item__popularity {
-    display: none;
+    @media (min-width: 500px) {
+      display: none;
+    }
 
     @media (min-width: 1050px) {
       display: flex;
@@ -250,7 +280,9 @@ const StyledTrackList = styled.ul`
   }
 
   .track__item__explicit {
-    display: none;
+    @media (min-width: 500px) {
+      display: none;
+    }
 
     @media (min-width: 1160px) {
       display: flex;
