@@ -78,7 +78,7 @@ const StyledSortedTracksPopup = styled.div`
                                 left: 50%;
                                 top: 50%;
                                 translate: -50% -50%;
-                                width: 100%;
+                                width: 130%;
                                 min-width: 30rem; 
                                 color: var(--white);
                                 overflow: visible;
