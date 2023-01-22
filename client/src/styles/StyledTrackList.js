@@ -31,6 +31,8 @@ const StyledTrackList = styled.ul`
         background-color: rgba(230,230,230,1);
         -webkit-appearance: none;
         appearance: none;
+        -webkit-text-fill-color: var(--green) !important;
+        color: var(--green);
         
         option:checked {
           background-color: var(--green);
@@ -43,7 +45,7 @@ const StyledTrackList = styled.ul`
         right: 6%;
         bottom: 1.4rem;
         height: auto;
-        color: var(--grey-dark);
+        color: var(--green);
         font-weight: 400;
         font-size: 2.5rem;
       }
