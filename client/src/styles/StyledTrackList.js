@@ -16,23 +16,38 @@ const StyledTrackList = styled.ul`
       align-items: center;
       gap: 1rem;
       margin-bottom: 2rem;
+      width: 50%;
+      min-width: 18rem;
+      margin: 2rem auto;
+      position: relative;
       
       select {
         font-size: 1.8rem;
         border-radius: 5px;
-        min-width: 50%;
+        width: 100%;
         outline: none;
         padding: 1rem;
         text-align: center;
         background-color: rgba(230,230,230,1);
+        -webkit-appearance: none;
+        appearance: none;
         
-        option {
-          
-          &:checked {
-            background-color: var(--green);
-          }
+        option:checked {
+          background-color: var(--green);
         }
       }
+
+      &::after {
+        content: '⌄';
+        position: absolute;
+        right: 6%;
+        bottom: 1.4rem;
+        height: auto;
+        color: var(--grey-dark);
+        font-weight: 400;
+        font-size: 2.5rem;
+      }
+      
     @media (min-width: 500px) {
       display: none;
   }
@@ -328,3 +343,7 @@ const StyledTrackList = styled.ul`
 `;
 
 export default StyledTrackList;
+
+
+
+
