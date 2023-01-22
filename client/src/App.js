@@ -35,7 +35,6 @@ function App() {
         setLoading(false);
         setAlert([err.response.data.error.status, err.response.data.error.message])
       })
-
   }, [])
 
   const renderAlert = () => {
@@ -54,6 +53,7 @@ function App() {
       </>
     )
   }
+
 
   return (
     <div className="App">

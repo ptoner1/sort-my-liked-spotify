@@ -1,4 +1,5 @@
 import { StyledAlert } from "../styles";
+import { logout } from "../spotify";
 
 export default function Alert({ code, msg, setAlert }) {
 
@@ -32,6 +33,9 @@ export default function Alert({ code, msg, setAlert }) {
                 {code >= 400 ? <h2>Error {code}</h2> : ''}
                 {code >= 500 ? serverError : ''}
                 <p>{text}</p>
+                {code === 401
+                    ? <button onClick={logout}>Log in</button>
+                    : ''}
             </div>
         </StyledAlert>
     )

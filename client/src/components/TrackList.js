@@ -1,16 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyledTrackList } from '../styles';
 import { formatDateAdded, formatPercentage } from '../utils';
 
 
 // const TrackList = ({ tracks, setSortingStrategy, sortingStrategy, flippedSortingStrategy, setFlippedSortingStrategy, className }) => {
 const TrackList = ({ tracks, setTracks, className }) => {
-
-    // Popup menu for mobile, maybe.
-    function clickTrackMenu(track) {
-        console.log(track)
-        alert('This feature not available yet.');
-    }
 
     const [sortingStrategy, setSortingStrategy] = useState('addedAt');
     const [flippedSortingStrategy, setFlippedSortingStrategy] = useState(false);
@@ -45,20 +39,6 @@ const TrackList = ({ tracks, setTracks, className }) => {
         if (selectedTrack === i) return setSelectedTrack(null);
         setSelectedTrack(i)
     }
-
-
-
-    const ref = useRef(null);
-
-    function genBackgroundColor(val) {
-        ref.current.size = val;
-        if (val === 1) ref.current.blur = true;
-    }
-
-    useEffect(() => {
-        const element = ref.current;
-        console.log(element)
-    }, [])
 
     return (
         <>
