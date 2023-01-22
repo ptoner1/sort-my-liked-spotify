@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { StyledTrackList } from '../styles';
 import { formatDateAdded, formatPercentage } from '../utils';
 
@@ -46,10 +46,44 @@ const TrackList = ({ tracks, setTracks, className }) => {
         setSelectedTrack(i)
     }
 
+
+
+    const ref = useRef(null);
+
+    function genBackgroundColor(val) {
+        ref.current.size = val;
+        if (val === 1) ref.current.blur = true;
+    }
+
+    useEffect(() => {
+        const element = ref.current;
+        console.log(element)
+    }, [])
+
     return (
         <>
             {tracks && tracks.length ? (
                 <StyledTrackList className={className}>
+
+                    <div className='track__list__sort'>
+                        <label htmlFor='audio-features'>Sort Songs by:</label>
+                        <select
+                            onInput={(e) => sort(e.target.value)}
+                            name="audio-features"
+                            id="audio-features"
+                        >
+                            <option value={sortingStrategy}>
+                                Flip {sortingStrategy === 'addedAt' ? 'Date Added' : sortingStrategy}
+                            </option>
+                            <option value="addedAt" selected>Date Added</option>
+                            <option value="danceability">Danceability</option>
+                            <option value="energy">Energy</option>
+                            <option value="tempo">Tempo</option>
+                            <option value="valence">Positivity</option>
+                            <option value="speechiness">Speechiness</option>
+                            <option value="popularity">Popularity</option>
+                        </select>
+                    </div>
 
                     <header className='track__item track__header'>
                         <h4 className='track__header__item'>#</h4>

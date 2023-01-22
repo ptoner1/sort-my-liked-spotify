@@ -7,6 +7,38 @@ const StyledTrackList = styled.ul`
   font-family: 'Roboto', sans-serif;
   letter-spacing: .03rem;
   max-width: var(--site-max-width);
+
+
+  .track__list__sort {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      
+      select {
+        font-size: 1.8rem;
+        border-radius: 5px;
+        min-width: 50%;
+        outline: none;
+        padding: 1rem;
+        text-align: center;
+        background-color: rgba(230,230,230,1);
+        
+        option {
+          
+          &:checked {
+            background-color: var(--green);
+          }
+        }
+      }
+    @media (min-width: 500px) {
+      display: none;
+  }
+}
+
+
   
   .track__item {
     display: grid;
@@ -55,17 +87,25 @@ const StyledTrackList = styled.ul`
       background-color: var(--grey-dark);
     }
 
-    /* &__selected:not(:first-child):not(div.track__item__title-group) { */
     &__selected {
       @media (max-width: 500px) {
 
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
+        position: relative;
         
         
         .track__item__title-group {
           grid-column-start: 1;
-          grid-column-end: 3;
+          grid-column-end: 4;
+        }
+
+        .track__item__menu {
+          position: absolute;
+          top: 1.1rem;
+          right: .4rem;
+          width: 4.8rem;
+          height: auto;
         }
         
       }
@@ -165,10 +205,6 @@ const StyledTrackList = styled.ul`
       cursor: pointer;
       background: transparent;
       padding: 0;
-
-      div {
-        translate: 0 -50%;
-      }
 
       div,
       div::before,
