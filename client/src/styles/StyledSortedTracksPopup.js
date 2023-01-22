@@ -82,6 +82,7 @@ const StyledSortedTracksPopup = styled.div`
                                 min-width: 30rem; 
                                 color: var(--white);
                                 overflow: visible;
+                                z-index: 101;
                             }
                     }
                     
