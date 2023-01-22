@@ -17,12 +17,14 @@ const StyledTrackList = styled.ul`
       gap: 1rem;
       margin-bottom: 2rem;
       width: 50%;
-      min-width: 18rem;
+      min-width: 22rem;
       margin: 2rem auto;
       position: relative;
       
       select {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
         border-radius: 5px;
         width: 100%;
         outline: none;
@@ -43,10 +45,10 @@ const StyledTrackList = styled.ul`
         content: '⌄';
         position: absolute;
         right: 6%;
-        bottom: 1.4rem;
+        bottom: 1.8rem;
         height: auto;
         color: var(--green);
-        font-weight: 400;
+        font-weight: 700;
         font-size: 2.5rem;
       }
       
