@@ -26,3 +26,6 @@
   If you want to allow the user to create a playlist of more than 100 songs, you could definitely do another work-around 
   like the "Add Songs" button on the homepage.
 </p>
+<p>
+  Play Music!  This sounds like a tricky feat because we're already making a lot of calls to the API, but it could be done.
+</p>
