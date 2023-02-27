@@ -3,7 +3,7 @@
   Ever wanted to sort your liked songs on Spotify?
 </p>
 <p>
-  They don't have that feature, but this user friendly application does that.  If you want to look at the final product, go to https://www.sort-spotify.com
+  This user friendly application does just that.  If you want to look at the final product, go to https://www.sort-spotify.com
 </p>
 </br>
 
