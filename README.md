@@ -23,6 +23,6 @@
   Improvement Suggestions
 </h3>
 <p>
-  I thought it'd be unnecessary to allow the user to generate playlists of over 100 songs (which is the API limit), but you could definitely do another work-around 
+  If you want to allow the user to create a playlist of more than 100 songs, you could definitely do another work-around 
   like the "Add Songs" button on the homepage.
 </p>
