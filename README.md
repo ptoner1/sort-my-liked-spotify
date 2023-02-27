@@ -12,6 +12,8 @@
   You'll have to use your Spotify account to create a project in their development console, found here: https://developer.spotify.com/dashboard/login.  
   You can just use your login information that you already have as a user.  When you "create an app", it'll give you your Spotify SECRET and KEY environment variables.
 </p>
+</br>
+
 <h1>Tweaking the Repo</h1>
 <p>
   Spotify makes it clear that any apps that use its API need to be styled very similarly to it's actual base application: www.open-spotify.com so if you want to 
