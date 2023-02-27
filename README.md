@@ -19,8 +19,11 @@
 
 <h1>Tweaking the Repo</h1>
 <p>
-  Spotify makes it clear that any apps that use its API need to be styled very similarly to it's actual base application: https://www.open.spotify.com so if you want to 
-  change the styling, don't go too far.  Read more here: https://developer.spotify.com/documentation/general/design-and-branding/
+  Spotify makes it clear that any apps that use its API need to be styled very similarly to it's actual base application: https://www.open.spotify.com so if
+  you want to change the styling, don't go too far.  Read more 
+  <a href="https://developer.spotify.com/documentation/general/design-and-branding/" target="_blank">
+    here.
+  </a>
 </p>
 <h3>
   Improvement Suggestions
