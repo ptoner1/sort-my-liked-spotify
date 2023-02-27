@@ -9,7 +9,10 @@
 
 <h1>Using the Repo</h1>
 <p>
-  You'll have to use your Spotify account to create a project in their development console, found here: https://developer.spotify.com/dashboard/login.  
+  You'll have to use your Spotify account to create a project in their development console, found 
+  <a href="https://developer.spotify.com/dashboard/login" target="_blank">
+    here.
+  </a>
   You can just use your login information that you already have as a user.  When you "create an app", it'll give you your Spotify SECRET and KEY environment variables.
 </p>
 </br>
