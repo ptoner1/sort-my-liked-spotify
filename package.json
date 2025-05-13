@@ -34,7 +34,8 @@
     "util": "^0.12.5"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "nodemon": "^3.1.10"
   },
   "browser": {
     "assert": false,
