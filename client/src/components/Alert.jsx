@@ -24,10 +24,18 @@ export default function Alert({ code, msg, setAlert }) {
     )
     const visible = code ? 'visible' : '';
 
+    function closeAlert() {
+        if (code == 399) {
+            setAlert([300, "Welcome! Press the 'add songs' button to gather your liked songs from Spotify, 50 at a time"])
+        }
+        else setAlert([]);
+    }
+
     return (
         <StyledAlert>
             <div className={`alert ${type} ${visible}`}>
-                <span className={'closebtn'} onClick={() => setAlert([])}>
+                {/* <span className={'closebtn'} onClick={() => setAlert([])}> */}
+                <span className={'closebtn'} onClick={closeAlert}>
                     &times;
                 </span>
                 {code >= 400 ? <h2>Error {code}</h2> : ''}

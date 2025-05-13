@@ -31,7 +31,8 @@ export default function Profile({ profile, setAlert, setLoading }) {
 
 
     useEffect(() => {
-        if (!songs) return setAlert([300, "Welcome! Press the 'add songs' button to gather your liked songs from Spotify, 50 at a time"])
+        if (!songs) setAlert([399,"Spotify recently removed crucial functions from their API.  Sadly, this has broken this app.  I'm researching a workaround for the Spotify API using 3rd party services in place of Spotify's 'get audio features' API.  I may have to do some machine learning of my own.  Stay tuned.", ]);
+        // if (!songs) return setAlert([300, "Welcome! Press the 'add songs' button to gather your liked songs from Spotify, 50 at a time"])
         // if (songs.length <= 50) return setAlert([393, "Please reach out if this website isn't working in any way.  I want to help. -Paul"])
     }, [])
 
