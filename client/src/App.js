@@ -38,7 +38,6 @@ function App() {
   }, [])
 
   const renderAlert = () => {
-    if (!alert) return
     if (alert) {
       return <Alert code={alert[0]} msg={alert[1]} setAlert={setAlert} />
     }
