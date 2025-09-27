@@ -1,3 +1,8 @@
 .DS_Store
 node_modules
 .env
+.amplify/
+amplify/
+amplify_outputs.json
+build/
+package-lock.json
