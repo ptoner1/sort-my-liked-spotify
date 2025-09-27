@@ -79,13 +79,14 @@ const StyledLoginContainer = styled.main`
     }
 `
 
+// Update the login URI to use the Amplify backend endpoint
+// This should be the API Gateway endpoint created by Amplify for your function
 const LOGIN_URI =
     process.env.NODE_ENV !== 'production'
-        ? 'http://localhost:8000/login'
+        ? process.env.REACT_APP_AMPLIFY_API_URL + '/login'
         : 'https://www.sort-spotify.com/login';
 
 export default function Login() {
-
     return (
         <StyledLoginContainer>
             <img src={Spotify_Logo_Green} alt="Spotify Logo" />
