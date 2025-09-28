@@ -4,6 +4,11 @@ const app = express();
 const axios = require('axios');
 const querystring = require('querystring');
 const path = require('path');
+const cookieParser = require('cookie-parser');
+
+// Add middleware
+app.use(cookieParser());
+app.use(express.json());
 
 
 const CLIENT_ID = process.env.CLIENT_ID;
