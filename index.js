@@ -18,7 +18,7 @@ const FRONTEND_URI = process.env.FRONTEND_URI;
 const PORT = process.env.PORT || 8000;
 
 // Priority serve static files from client dir
-app.use(express.static(path.resolve(__dirname, './client/build')))
+// app.use(express.static(path.resolve(__dirname, './client/build')))
 
 // Generates a random string containing letters and numbers
 const generateRandomString = length => {
